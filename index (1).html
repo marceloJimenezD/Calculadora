@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Graficadora Iostream</title>
+	 <style type="text/css">
+    .oscuro{
+      background-color: #3d3939;
+      color: #FFFFFF ;
+    }
+	</style>
+</head>
+<body>
+	<h2>******GRAFICADORA IOSTREAM******</h2>
+	<label>f(x)=</label>
+	<input type="text" id="F" size="15">
+	<button onclick="extraerFuncion()" >Graficar</button>
+	<label>Resolución=</label>
+	<input type="text" id="D" size="5">
+	<label> Theme: </label>
+	<button onclick="cambiarColor()">Dark/Light</button>
+	<br> <br>
+	<canvas width="451" height="450" id="canvas"></canvas>
+	<script src="logica (copy 8).js"></script>
+</body>
+</html>
