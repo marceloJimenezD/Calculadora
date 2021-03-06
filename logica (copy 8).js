@@ -162,7 +162,8 @@ function evaluaFuncion(Equis,funcion){
 	ln = /ln/gi;
 	log = /log/gi;
 	/*Se usan las expresiones anteriores y no se reemplaza directamente un string porque de hacerlo solo se reemplaza
-	el primer valor encontrado.*/
+	el primer valor encontrado.  ^*/
+	funcion = funcion.replace("^","**");
 	funcion = funcion.replace(x,"(x)");
 	funcion = funcion.replace(x, Equis);
 	funcion = funcion.replace(log,"Math.log10").replace(ln, "Math.log");
@@ -346,18 +347,20 @@ function zoomMenos(){
 //****************ESCUCHADOR DE EVENTOS: EL NAVEGADOR ESTA ATENTO A LAS TECLAS QUE PRESIONA EL USUARIO******************
 document.addEventListener("keydown",oprimir);//SE CREA Y AÑADE EL ESCUCHADOR, CUANDO SE PRESIONA UNA TECLA LLAMA A LA FUNCION OPRIMIR
 function oprimir(e){//e ES TODA LA INFORMACION SOBRE LA TECLA QUE SE OPRIMIDO , CODIGO , NOMBRE, ETC
-	event.preventDefault();
+	
 	switch(e.keyCode){ // YO SOLO NECESITO SU CODIGO Y CON ESO SE QUÉ TECLA SE OPRIME
 		case 37://IZQUIERDA
 			moverIzquierda();
 		break;
 		case 38://ARRIBA
+			e.preventDefault();
 			moverArriba();
 		break;
 		case 39://DERECHA
 			moverDerecha();
 		break;
 		case 40://ABAJO
+			e.preventDefault();
 			moverAbajo();
 		break;
 		case 80://P
