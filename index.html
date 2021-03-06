@@ -2,25 +2,55 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Graficadora Iostream</title>
-	 <style type="text/css">
-    .oscuro{
-      background-color: #3d3939;
-      color: #FFFFFF ;
-    }
-	</style>
+	<title>GraficadoraLorcha</title>
+	<link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-	<h2>******GRAFICADORA IOSTREAM******</h2>
-	<label>f(x)=</label>
-	<input type="text" id="F" size="15">
-	<button onclick="extraerFuncion()" >Graficar</button>
-	<label>Resolución=</label>
-	<input type="text" id="D" size="5">
-	<label> Theme: </label>
-	<button onclick="cambiarColor()">Dark/Light</button>
-	<br> <br>
-	<canvas width="451" height="450" id="canvas"></canvas>
+	<header>
+		<div>
+			<h2>GRAFICADORA</h2>
+		</div>
+			
+	</header>
+	<main>
+		<div class="comandos">
+			<span class="graf">
+				<label>F(x)=</label>
+				<input type="text" id="F" size="15">
+				<button onclick="extraerFuncion()" >Graficar</button>
+			</span>
+			
+			<span class="res">
+				<label>Resolución=</label>
+				<input type="text" id="D" size="5">	
+				
+			</span>
+			
+		</div>
+		<div class="pantalla">
+			<canvas width="551" height="550" id="canvas"></canvas>
+		</div>
+		
+		<div class="controles">
+			<button id="UPbtn" onclick="moverArriba()">UP</button>
+			<button id="DOWNbtn" onclick="moverAbajo()">DOWN</button>
+			<button id="LEFTbtn" onclick="moverIzquierda()">LEFT</button>
+			<button id="RIGTHbtn" onclick="moverDerecha()">RIGTH</button>
+			
+			<button id="ZOOMplus" onclick=" zoomMas()">+</button>
+			
+			<button id="ZOOMminus" onclick="zoomMenos()">-</button>
+		</div>
+	</main>
+	<footer>
+
+	</footer>
+	
+	
+	
+	
+	
+
 	<script src="logica (copy 8).js"></script>
 </body>
 </html>

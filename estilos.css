@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: antiquewhite;
+}
+
+button{
+    color: antiquewhite;
+    background-color: #238636;
+    border-color: #2ea043;
+    border-style: none;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 16px;
+    
+}
+
+
+button:hover {
+    color: antiquewhite;
+    background-color: #2ea043;
+    border-color: #238636;
+    border-width: 3px;
+    border-style: none;
+    border-radius: 10px;
+    height: 30px;
+    font-size: 16px;
+}
+header{
+    display: flex;
+    justify-content: center;
+    background-color:#161b22 ;
+    padding: 1vh;
+    height: 7vh;
+    font-size: 3vh;
+    
+}
+
+main{
+    text-align: center;
+    
+    height: 100%;
+    
+}
+
+body{
+    background-color: #0d1117;
+}
+
+footer{
+    background-color: #0d1117;
+}
+
+.comandos{
+    padding: 10px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+.comandos span{
+    margin:40px;
+}
+.comandos span label{
+    font-size:18px;
+}
+
+.comandos span input{
+    height: 30px;
+    font-size: 15px;
+    color: black;
+    border-width: 3px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+    
+}
+
+.controles{
+    padding: 20px;
+    padding-top: 50px;
+    margin-top:10px;
+    
+    
+}
+
+.controles button {
+    width:16%;
+    
+}
+
+main canvas{
+    border-style: solid;
+    border-color:#505d70;
+    border-block-width: 5px;
+}
+
+

@@ -32,10 +32,10 @@ var centroY;
 
 var Xmouse=0; //POSICIÓN DEL MOUSE EN ELE EJE X
 
-var colorN = "black";    //COLOR DE LOS NÚMEROS Y CUADRILLAS DEL EJE X E Y.
-var colorB = "blue";     //CUADRÍCULAS QUE NO SON LOS EJES
-var colorW = "white";    //COLOR DEL CANVAS
-var colorF = "red";      //COLOR DE LA FUNCIÓN
+var colorN = "white";    //COLOR DE LOS NÚMEROS Y CUADRILLAS DEL EJE X E Y.
+var colorB = "gray";     //CUADRÍCULAS QUE NO SON LOS EJES
+var colorW = "green";    //COLOR DEL CANVAS
+var colorF = "yellow";      //COLOR DE LA FUNCIÓN
 
 //INICIALIZAMOS VALORES DE LOS EJES:
 for(var i = 0 ; i<alto;i++){
@@ -45,24 +45,7 @@ for(var i = 0 ; i<alto;i++){
 for(var i = 0 ; i<ancho;i++){
 	ejeX[i]=i*unidadX/tamanoUnidad;
 }
-//*********************FUNCIÓN PARA CAMBIAR DE COLOR CUANDO SE PRESIONA EL BOTONCITO :v*********************************
-function cambiarColor(){
-	if(colorW === "white"){
-		cuerpoweb.classList.toggle("oscuro");
-		colorN = "white";
-		colorB = "violet";
-		colorW = "#3d3939";
-		colorF = "yellow";
-		actualizar();
-	} else if(colorW === "#3d3939"){
-		cuerpoweb.classList.toggle("oscuro");
-		colorN = "black";
-		colorB = "blue";
-		colorW = "white";
-		colorF = "red";
-		actualizar();
-	}
-}
+
 //*********************************************************************************************************************
 //*************************************FUNCIÓN QUE BORRA TODA LA PANTALLA***********************************************
 function limpiar(){
@@ -363,6 +346,7 @@ function zoomMenos(){
 //****************ESCUCHADOR DE EVENTOS: EL NAVEGADOR ESTA ATENTO A LAS TECLAS QUE PRESIONA EL USUARIO******************
 document.addEventListener("keydown",oprimir);//SE CREA Y AÑADE EL ESCUCHADOR, CUANDO SE PRESIONA UNA TECLA LLAMA A LA FUNCION OPRIMIR
 function oprimir(e){//e ES TODA LA INFORMACION SOBRE LA TECLA QUE SE OPRIMIDO , CODIGO , NOMBRE, ETC
+	event.preventDefault();
 	switch(e.keyCode){ // YO SOLO NECESITO SU CODIGO Y CON ESO SE QUÉ TECLA SE OPRIME
 		case 37://IZQUIERDA
 			moverIzquierda();
